@@ -11,7 +11,7 @@ const HeroSection = () => {
 
     // Initialize Typed.js instance
     const options = {
-      strings: ["Nipesh Ghimire", "Full Stack Developer", "Designer"],
+      strings: ["Nipesh Ghimire", "Full Stack Developer", "Graphic Designer"],
       typeSpeed: 150, // Typing speed
       backSpeed: 150, // Deleting speed
       backDelay: 3000, // Time to wait before starting to delete the text

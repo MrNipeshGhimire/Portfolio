@@ -87,7 +87,7 @@ const WorksSection = () => {
       description: "Personal portfolio website with modern design",
       tech: ["React", "Tailwind CSS", "Django","mySql"],
       liveLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/MrNipeshGhimire/Portfolio",
     },
   ];
 

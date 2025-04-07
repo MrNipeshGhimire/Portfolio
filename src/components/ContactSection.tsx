@@ -1,6 +1,8 @@
 
 import { useState, useEffect } from "react";
 import { Send, Phone, Mail, MapPin } from "lucide-react";
+import emailjs from '@emailjs/browser';
+
 
 const ContactSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,15 +37,30 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Here you would typically handle the form submission with a backend API
-    alert("Thanks for your message! This form doesn't actually send emails yet.");
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+  
+    emailjs
+      .send(
+        'service_cxbzes7', // replace with your EmailJS service ID
+        'template_cqn1zkj', // replace with your template ID
+        formData,
+        'SVZGe-dZVhtFBB3wn' // replace with your public key
+      )
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (err) => {
+          console.log('FAILED...', err);
+          alert('Something went wrong. Please try again later.');
+        }
+      );
   };
 
   const contactInfo = [
@@ -159,7 +176,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      placeholder="John Doe"
+                      placeholder="Your name"
                     />
                   </div>
                   <div className={`transform transition-all duration-700 delay-700 ${
@@ -176,7 +193,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      placeholder="email@example.com"
+                      placeholder="Your email"
                     />
                   </div>
                   <div className={`md:col-span-2 transform transition-all duration-700 delay-800 ${
@@ -193,7 +210,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      placeholder="Project Inquiry"
+                      placeholder="Subject"
                     />
                   </div>
                   <div className={`md:col-span-2 transform transition-all duration-700 delay-900 ${
