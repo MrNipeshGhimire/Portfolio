@@ -49,7 +49,7 @@ const HeroSection = () => {
                 isVisible ? "opacity-100" : "opacity-0 translate-y-10"
               }`}
             >
-              <span className="typed-text" />
+              <span className="typed-text text-primary" />
             </h1>
             <p
               className={`text-lg text-muted-foreground mb-8 max-w-lg transform transition-all duration-700 delay-700 ${
@@ -61,24 +61,25 @@ const HeroSection = () => {
               and scalable web applications.
             </p>
             <div
-              className={`flex space-x-4 transform transition-all duration-700 delay-900 ${
-                isVisible ? "opacity-100" : "opacity-0 translate-y-10"
-              }`}
-            >
-              <a
-                href="#works"
-                className="btn btn-primary btn-lg flex items-center gap-2 font-semibold"
-              >
-                View My Work
-                <ArrowRight size={16} />
-              </a>
-              <a
-                href="#contact"
-                className="btn btn-secondary btn-lg font-semibold"
-              >
-                Contact Me
-              </a>
-            </div>
+  className={`flex space-x-4 transform transition-all duration-700 delay-900 ${
+    isVisible ? "opacity-100" : "opacity-0 translate-y-10"
+  }`}
+>
+  <a
+    href="#works"
+    className="btn btn-primary btn-lg flex items-center gap-2 font-semibold text-sm whitespace-nowrap sm:text-base"
+  >
+    View My Work
+    {/* <ArrowRight size={16} /> */}
+  </a>
+  <a
+    href="#contact"
+    className="btn btn-secondary btn-lg font-semibold text-sm whitespace-nowrap sm:text-base"
+  >
+    Contact Me
+  </a>
+</div>
+
           </div>
           <div className="order-1 md:order-2 flex justify-center">
             <div

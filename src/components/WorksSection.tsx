@@ -37,7 +37,7 @@ const WorksSection = () => {
       description: "A full-featured e-commerce platform with product management, cart and checkout",
       tech: ["Html", "css", "Django", "mySql"],
       liveLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/MrNipeshGhimire/Ecommerce-Project",
     },
     {
       id: 2,
@@ -67,7 +67,7 @@ const WorksSection = () => {
       description: "A web app for individuals with mental health issues to track their daily mood, consult doctors, and interact with AI chatbots.",
       tech: ["React", "Tailwind css","Django", "MySql"],
       liveLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/MrNipeshGhimire/mood-net",
     },
     {
       id: 5,
