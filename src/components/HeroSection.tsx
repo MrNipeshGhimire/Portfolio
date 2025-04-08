@@ -56,8 +56,9 @@ const HeroSection = () => {
                 isVisible ? "opacity-100" : "opacity-0 translate-y-10"
               }`}
             >
-              A passionate Full Stack Python Developer specializing in building
-              exceptional digital experiences with modern technologies.
+              A passionate Full Stack Web Developer specializing in building exceptional digital experiences using modern technologies, with a 
+              strong expertise in Django for crafting robust
+              and scalable web applications.
             </p>
             <div
               className={`flex space-x-4 transform transition-all duration-700 delay-900 ${

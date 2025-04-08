@@ -57,7 +57,7 @@ const WorksSection = () => {
       description: "A web app for tracking the daily expenses and incomes",
       tech: ["Html","Tailwind Css", "Django", "mySql"],
       liveLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/MrNipeshGhimire/ExpenseTracker",
     },
     {
       id: 4,
