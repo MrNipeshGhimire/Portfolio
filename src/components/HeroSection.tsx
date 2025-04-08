@@ -28,7 +28,7 @@ const HeroSection = () => {
       typed.destroy();
     };
   }, []);
-
+ 
   return (
     <section
       id="home"
