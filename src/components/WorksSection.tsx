@@ -4,7 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 import moodNet from '../images/moodNet.jpg'; 
 import ecommerce from '../images/ecommerce.png'; 
 import tourImg from '../images/tour.jpg'; 
-import portfolioImg from '../images/portfolio.jpg'; 
+import portfolioImg from '../images/portfolio.JPG'; 
 
 
 const WorksSection = () => {
